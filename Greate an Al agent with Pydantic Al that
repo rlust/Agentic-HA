@@ -1,0 +1,9 @@
+Greate an Al agent with Pydantic Al that can use the Home Assistant Aspire MCP server. Be sure to use the specific syntax for connecting MCP servers to Pydantic Al agents. The JSON config (that you'll need to adjust for Pydantic Al) for the Aspire MCP looks like:
+"Aspire New": {
+      "command": "mcp-proxy",
+      "env": {
+        "SSE_URL": "http://192.168.100.101:8123/mcp_server/sse",
+        "API_ACCESS_TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjZjkzODQxNjBhN2Y0NjM2YjgzYTNkYTYyYjNlMWY1MiIsImlhdCI6MTc0NTI2MzI1MywiZXhwIjoyMDYwNjIzMjUzfQ.qNueMkpSlP7S0Os18u3yHWKR4rY2a2GkbEqmgpglWGY"
+      }
+This agent should use an OpenAlModel but with the base URL and specific model defined as environment variables.
+Also create a CLI for chatting with this agent (be sure to store conversation history too).
