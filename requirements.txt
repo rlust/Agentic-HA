@@ -1,3 +1,6 @@
 pydantic-ai
 openai
 python-dotenv
+fastapi
+httpx
+uvicorn
